@@ -1,0 +1,60 @@
+﻿<html>
+<body >
+  <input type="radio" id="r1" name="W" checked="true" onclick="changeImg()">W/L 300/1000 <br>
+  <input type="radio" id="r2" name="W" onclick="changeImg()">W/L  600/1000 <br>
+  <input type="radio" id="r3" name="W" onclick="changeImg()" >W/L  1200/1000 <br>
+  
+  <div style="position: relative;">
+     <img id="img1" src="300-1000.PNG" width="640" height="444" style="position: absolute;  left: 0px; top:0px; z-index: 1;" />
+     <svg id="svg" width="640" height="444" style="position: absolute;  left: 0px; top:0px; z-index: 2;">
+         <text x="0" y="15" fill="red">I love 110316110</text>
+         <circle id="circle1" cx="310" cy="160" r="100" stroke="blue" stroke-width="1" fill="none"/>
+         <rect id="rect2" x="280" y="180" width="150" height="60" style="visibility: hidden;" />
+         <ellipse id="ellipse3" cx="240" cy="170" rx="50" ry="30" style="visibility: hidden" />
+     </svg> 
+         
+  </div>
+</body>
+    <script type="text/javascript">
+    
+    function changeImg() { 
+    //  jpgDir/300-1000.PNG" 
+
+      //  alert("aaa");
+        if (document.getElementById("r1").checked == true) {
+                document.getElementById("img1").src = "300-1000.PNG"                 
+                document.getElementById("img1").width = "640" 
+                document.getElementById("img1").height = "444" 
+
+                document.getElementById("circle1").style="visibility:visible;;stroke:blue;fill:none"
+                document.getElementById("rect2").style="visibility:hidden;"
+                document.getElementById("ellipse3").style="visibility:hidden;"
+            }
+
+        if (document.getElementById("r2").checked == true) {
+                document.getElementById("img1").src = "600-1500.PNG" 
+                document.getElementById("img1").width = "800" 
+                document.getElementById("img1").height = "450" 
+
+                document.getElementById("circle1").style="visibility:hidden;"
+                document.getElementById("rect2").style="visibility:visible;;stroke:blue;fill:none"
+                document.getElementById("ellipse3").style="visibility:hidden;"
+
+            }
+
+        if (document.getElementById("r3").checked == true) {
+                document.getElementById("img1").src = "1200-1000.PNG" 
+                document.getElementById("img1").width = "686" 
+                document.getElementById("img1").height = "458" 
+
+                document.getElementById("circle1").style="visibility:hidden;"
+                document.getElementById("rect2").style="visibility:hidden;"
+                document.getElementById("ellipse3").style="visibility:visible;stroke:blue;fill:none"
+
+            }  
+
+        }        
+
+    </script>
+
+</html>
